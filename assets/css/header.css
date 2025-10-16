@@ -366,7 +366,6 @@
   }
   .navbar-area.sticky {
     top: 0 !important;
-    background-color: var(--primaryColor);
   }
   .navbar-area .navbar .navbar-brand img {
     max-width: 105px;
