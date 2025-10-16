@@ -1,7 +1,10 @@
-(function() {
-	"use strict";
-    
-    window.onload = function(){
+(function () {
+    "use strict";
+
+    window.onload = function () {
+
+
+ 
 
         /*------------------------------------------------
                Sticky Header
@@ -26,8 +29,8 @@
         progressPath.style.strokeDashoffset = pathLength;
         progressPath.getBoundingClientRect();
         progressPath.style.transition = progressPath.style.webkitTransition =
-        "stroke-dashoffset 10ms linear";
-        
+            "stroke-dashoffset 10ms linear";
+
         const onScollEvent = function (event) {
             let scroll = window.scrollY;
             let height = document.body.scrollHeight - window.innerHeight;
@@ -35,16 +38,16 @@
             progressPath.style.strokeDashoffset = progress;
 
             let offset = 50;
-                if (window.scrollY > offset) {
+            if (window.scrollY > offset) {
                 progressWrap.classList.add("active-progress");
-                } else {
+            } else {
                 progressWrap.classList.remove("active-progress");
             }
         };
 
         onScollEvent();
-            window.onscroll = onScollEvent;
-            progressWrap.onclick = function (event) {
+        window.onscroll = onScollEvent;
+        progressWrap.onclick = function (event) {
             window.scroll({ top: 0, behavior: "smooth" });
             return false;
         };
@@ -79,7 +82,7 @@
         });
 
         function updateSpotlight(e) {
-            spotlight.style.backgroundImage = 
+            spotlight.style.backgroundImage =
                 `radial-gradient(circle at ${e.pageX / window.innerWidth * 100}% ${e.pageY / window.innerHeight * 100}%, ${spotlightSize}`;
         }
     });
@@ -101,7 +104,7 @@
             el: '.hero-pagination',
             type: 'fraction',
             renderFraction: function (currentClass, totalClass) {
-            return `
+                return `
                 <span class="${currentClass}"></span>
                 <span class="swiper-separator">/</span>
                 <span class="${totalClass}"></span>
@@ -110,10 +113,10 @@
         },
         on: {
             slideChange: function () {
-            updateFractionPadding();
+                updateFractionPadding();
             },
             init: function () {
-            updateFractionPadding();
+                updateFractionPadding();
             }
         }
     });
@@ -134,7 +137,7 @@
     var testimonial_slider_one = new Swiper(".testimonial-slider-one", {
         spaceBetween: 24,
         speed: 12000,
-        loop:true,
+        loop: true,
         autoHeight: true,
         autoplay: {
             delay: 1,
@@ -189,7 +192,7 @@
     /*------------------------------------------------
               Service Slider
     ------------------------------------------------*/
-	var service_slider_one = new Swiper(".service-slider-one", {
+    var service_slider_one = new Swiper(".service-slider-one", {
         loop: true,
         speed: 1500,
         spaceBetween: 24,
@@ -228,13 +231,13 @@
     /*------------------------------------------------
               Case Study Slider
     ------------------------------------------------*/
-	var case_slider_one = new Swiper(".case-slider-one", {
+    var case_slider_one = new Swiper(".case-slider-one", {
         loop: true,
         speed: 1500,
         freemode: false,
         spaceBetween: 24,
         simulateTouch: false,
-         navigation: {
+        navigation: {
             nextEl: ".case-next",
             prevEl: ".case-prev",
         },
@@ -269,7 +272,7 @@
     /*------------------------------------------------
               Blog Slider
     ------------------------------------------------*/
-	var blog_slider_one = new Swiper(".blog-slider-one", {
+    var blog_slider_one = new Swiper(".blog-slider-one", {
         loop: true,
         speed: 1500,
         freemode: false,
@@ -294,40 +297,40 @@
     /*------------------------------------------------
              Service Js
     ------------------------------------------------*/
-   
 
 
 
 
-     /*------------------------------------------------
-             Counter Js
-    ------------------------------------------------*/
+
+    /*------------------------------------------------
+            Counter Js
+   ------------------------------------------------*/
     if ("IntersectionObserver" in window) {
         let counterObserver = new IntersectionObserver(function (entries, observer) {
             entries.forEach(function (entry) {
                 if (entry.isIntersecting) {
-                let counter = entry.target;
-                let target = parseInt(counter.innerText);
-                let step = target / 200;
-                let current = 0;
-                let timer = setInterval(function () {
-                    current += step;
-                    counter.innerText = Math.floor(current);
-                    if (parseInt(counter.innerText) >= target) {
-                    clearInterval(timer);
-                    }
-                }, 10);
-                counterObserver.unobserve(counter);
+                    let counter = entry.target;
+                    let target = parseInt(counter.innerText);
+                    let step = target / 200;
+                    let current = 0;
+                    let timer = setInterval(function () {
+                        current += step;
+                        counter.innerText = Math.floor(current);
+                        if (parseInt(counter.innerText) >= target) {
+                            clearInterval(timer);
+                        }
+                    }, 10);
+                    counterObserver.unobserve(counter);
                 }
             });
         });
         let counters = document.querySelectorAll(".counter");
-            counters.forEach(function (counter) {
+        counters.forEach(function (counter) {
             counterObserver.observe(counter);
         });
     }
 
-   //Gsap Mousemove Animation
+    //Gsap Mousemove Animation
     /*------------------------------------------------
               Hero Slider One
     ------------------------------------------------*/
@@ -339,21 +342,21 @@
             const depth = 65;
             const moveX = (e.pageX - window.innerWidth / 2) / depth;
             const moveY = (e.pageY - window.innerHeight / 2) / depth;
-            index ++
+            index++
 
             gsap.to(circle, {
-            x: moveX * index,
-            y: moveY * index,
+                x: moveX * index,
+                y: moveY * index,
             });
         });
     }
 
     gsap.registerPlugin(SplitText, ScrollTrigger);
-    
-    
-     /*------------------------------------------------
-              GSAP Text Animation
-    ------------------------------------------------*/
+
+
+    /*------------------------------------------------
+             GSAP Text Animation
+   ------------------------------------------------*/
     //Text Reveal From Bottom
     document.addEventListener("DOMContentLoaded", () => {
         const titles = document.querySelectorAll(".reveal-text-bottom");
@@ -399,37 +402,37 @@
     let split = new SplitText(".reveal-text", { type: "chars" });
 
     gsap.from(split.chars, {
-      x: 20,
-      opacity: 0,
-      duration: 0.6,
-      ease: "power4.out",
-      stagger: 0.05
+        x: 20,
+        opacity: 0,
+        duration: 0.6,
+        ease: "power4.out",
+        stagger: 0.05
     });
 
     //Text Reveal By Words
     let split_two = new SplitText(".reveal-text-two", { type: "words" });
 
     gsap.from(split_two.words, {
-      y: 40,
-      opacity: 0,
-      duration: 1.2,
-      ease: "power4.out",
-      stagger: 0.15
+        y: 40,
+        opacity: 0,
+        duration: 1.2,
+        ease: "power4.out",
+        stagger: 0.15
     });
 
     //Text Reveal From Right
-    window.addEventListener("load", function() {
+    window.addEventListener("load", function () {
         gsap.registerPlugin(CustomEase);
-    
+
         // Wrap every letter
         const textRevealElements = document.querySelectorAll(".reveal-text-right");
-    
+
         textRevealElements.forEach((element) => {
             element.innerHTML = element.textContent.replace(
                 /([-A-Za-z0-9!$#%^&*@()_+|~=`{}\[\]:";'<>?,.\/]+)/g,
                 '<div class="word">$1</div>'
             );
-    
+
             let words = element.querySelectorAll(".word");
             words.forEach((word) => {
                 word.innerHTML = word.textContent.replace(
@@ -437,9 +440,9 @@
                     "<div class='perspective'><div class='letter'><div>$&</div></div></div>"
                 );
             });
-    
+
             const letters = element.querySelectorAll(".letter");
-    
+
             let tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: element,
@@ -450,15 +453,15 @@
             tl.fromTo(
                 letters,
                 0.6, {
-                    transformOrigin: "center",
-                    rotationY: 90,
-                    x: 30
-                }, {
-                    rotationY: 0.1,
-                    x: 0,
-                    stagger: 0.025,
-                    ease: CustomEase.create("custom", "M0,0 C0.425,0.005 0,1 1,1 ")
-                }
+                transformOrigin: "center",
+                rotationY: 90,
+                x: 30
+            }, {
+                rotationY: 0.1,
+                x: 0,
+                stagger: 0.025,
+                ease: CustomEase.create("custom", "M0,0 C0.425,0.005 0,1 1,1 ")
+            }
             );
         });
     });
@@ -469,21 +472,21 @@
     splitTitleLines.forEach(splitTextLine => {
         const tl = gsap.timeline({
             scrollTrigger: {
-            trigger: splitTextLine,
-            start: 'top 90%',
-            end: 'bottom 60%',
-            scrub: false,
-            markers: false,
-            toggleActions: 'play none none none'
-        }
+                trigger: splitTextLine,
+                start: 'top 90%',
+                end: 'bottom 60%',
+                scrub: false,
+                markers: false,
+                toggleActions: 'play none none none'
+            }
+        });
+
+        const itemSplitted = new SplitText(splitTextLine, { type: "words, lines" });
+        gsap.set(splitTextLine, { perspective: 400 });
+        itemSplitted.split({ type: "lines" })
+        tl.from(itemSplitted.lines, { duration: 1, delay: 0.3, opacity: 0, rotationX: -90, force3D: true, transformOrigin: "top center -50", stagger: 0.1 });
     });
 
-    const itemSplitted = new SplitText(splitTextLine, { type: "words, lines" });
-    gsap.set(splitTextLine, { perspective: 400 });
-    itemSplitted.split({ type: "lines" })
-    tl.from(itemSplitted.lines, { duration: 1, delay: 0.3, opacity: 0, rotationX: -90, force3D: true, transformOrigin: "top center -50", stagger: 0.1 });
-    });
-    
     /*------------------------------------------------
             GSAP Image Tilt Effect
     ------------------------------------------------*/
@@ -497,8 +500,8 @@
                 const y = (e.clientY - top - height / 2) / height * 2;
 
                 gsap.to(img, {
-                    rotateY: x * 15, 
-                    rotateX: y * -15, 
+                    rotateY: x * 15,
+                    rotateX: y * -15,
                     transformPerspective: 2000,
                     ease: "power2.out",
                     duration: 0.3,
@@ -525,24 +528,24 @@
 
     lenis.on('scroll', ScrollTrigger.update);
 
-        gsap.ticker.add((time)=>{
+    gsap.ticker.add((time) => {
         lenis.raf(time * 1000)
     })
 
     gsap.utils.toArray('.img-container').forEach(container => {
-    const img = container.querySelector('img');
+        const img = container.querySelector('img');
 
-    const tl = gsap.timeline({
-        scrollTrigger: {
-        trigger: container,
-        scrub: true,
-        pin: false,
-        }
-    });
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: container,
+                scrub: true,
+                pin: false,
+            }
+        });
 
-    tl.fromTo(img, {
-        yPercent: -20,
-        ease: 'none'
+        tl.fromTo(img, {
+            yPercent: -20,
+            ease: 'none'
         }, {
             yPercent: 20,
             ease: 'none'
@@ -648,83 +651,83 @@
               scrollCue Slider One
     ------------------------------------------------*/
     scrollCue.init({
-        threshold: 0.05, 
+        threshold: 0.05,
     });
 
-})();   
+})();
 
-   
-    /*------------------------------------------------
-                Custom Cursor CSS
-    ------------------------------------------------*/
-    // Select cursor elements
-    const cursor = document.querySelector('.cursor');
-    const cursorinner = document.querySelector('.cursor-inner');
-    const cursorText = document.querySelector('.cursor-text');
-    const links = document.querySelectorAll('a');
 
-    // Cursor positions
-    let mouseX = 0,
-        mouseY = 0;
-    let posX = 0,
-        posY = 0;
-    const speed = 0.2; // easing factor (0.1 = slower, 0.3 = faster)
+/*------------------------------------------------
+            Custom Cursor CSS
+------------------------------------------------*/
+// Select cursor elements
+const cursor = document.querySelector('.cursor');
+const cursorinner = document.querySelector('.cursor-inner');
+const cursorText = document.querySelector('.cursor-text');
+const links = document.querySelectorAll('a');
 
-    // Track mouse position
-    document.addEventListener('mousemove', e => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
+// Cursor positions
+let mouseX = 0,
+    mouseY = 0;
+let posX = 0,
+    posY = 0;
+const speed = 0.2; // easing factor (0.1 = slower, 0.3 = faster)
 
-        // Outer cursor follows instantly
-        cursor.style.transform = `translate3d(calc(${mouseX}px - 50%), calc(${mouseY}px - 50%), 0)`;
+// Track mouse position
+document.addEventListener('mousemove', e => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+
+    // Outer cursor follows instantly
+    cursor.style.transform = `translate3d(calc(${mouseX}px - 50%), calc(${mouseY}px - 50%), 0)`;
+});
+
+// Animate inner cursor smoothly
+function animateCursor() {
+    posX += (mouseX - posX) * speed;
+    posY += (mouseY - posY) * speed;
+    cursorinner.style.transform = `translate3d(${posX}px, ${posY}px, 0)`;
+    requestAnimationFrame(animateCursor);
+}
+animateCursor();
+
+// -------------------
+// Click animation
+// -------------------
+document.addEventListener('mousedown', () => {
+    cursor.classList.add('click');
+    cursorinner.classList.add('cursorinnerhover');
+});
+document.addEventListener('mouseup', () => {
+    cursor.classList.remove('click');
+    cursorinner.classList.remove('cursorinnerhover');
+});
+
+// -------------------
+// Hover effect for links
+// -------------------
+links.forEach(link => {
+    link.addEventListener('mouseenter', () => cursor.classList.add('hover'));
+    link.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
+});
+
+// -------------------
+// Custom text/icon on specific elements
+// -------------------
+const hoverTargets = document.querySelectorAll('.hover-text-target');
+
+hoverTargets.forEach(target => {
+    target.addEventListener('mouseenter', () => {
+        cursor.classList.add('show-text');
+        const text = target.getAttribute('data-cursor-text');
+        cursorText.textContent = text ? text : "View";
     });
 
-    // Animate inner cursor smoothly
-    function animateCursor() {
-        posX += (mouseX - posX) * speed;
-        posY += (mouseY - posY) * speed;
-        cursorinner.style.transform = `translate3d(${posX}px, ${posY}px, 0)`;
-        requestAnimationFrame(animateCursor);
-    }
-    animateCursor();
-
-    // -------------------
-    // Click animation
-    // -------------------
-    document.addEventListener('mousedown', () => {
-        cursor.classList.add('click');
-        cursorinner.classList.add('cursorinnerhover');
+    target.addEventListener('mouseleave', () => {
+        cursor.classList.remove('show-text');
+        cursorText.textContent = "";
     });
-    document.addEventListener('mouseup', () => {
-        cursor.classList.remove('click');
-        cursorinner.classList.remove('cursorinnerhover');
-    });
-
-    // -------------------
-    // Hover effect for links
-    // -------------------
-    links.forEach(link => {
-        link.addEventListener('mouseenter', () => cursor.classList.add('hover'));
-        link.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
-    });
-
-    // -------------------
-    // Custom text/icon on specific elements
-    // -------------------
-    const hoverTargets = document.querySelectorAll('.hover-text-target');
-
-    hoverTargets.forEach(target => {
-        target.addEventListener('mouseenter', () => {
-            cursor.classList.add('show-text');
-            const text = target.getAttribute('data-cursor-text');
-            cursorText.textContent = text ? text : "View";
-        });
-
-        target.addEventListener('mouseleave', () => {
-            cursor.classList.remove('show-text');
-            cursorText.textContent = "";
-        });
-    });
+});
 
 try {
 
@@ -748,8 +751,8 @@ try {
             document.querySelector('.slider-btn').checked = false;
         } else {
             setTheme('theme-light');
-        document.querySelector('.slider-btn').checked = true;
+            document.querySelector('.slider-btn').checked = true;
         }
     })();
 
-} catch (err) {}
+} catch (err) { }
