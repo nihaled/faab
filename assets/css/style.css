@@ -341,6 +341,10 @@ body {
   padding-top: 120px;
 }
 
+.pb-50 {
+  padding-bottom: 50px;
+}
+
 .pb-90 {
   padding-bottom: 90px;
 }
@@ -1552,7 +1556,7 @@ body {
 /*------------------------------------------------
     Custom Cursor CSS
 ------------------------------------------------*/
-/* .cursor {
+.cursor {
   width: 35px;
   height: 35px;
   border-radius: 100%;
@@ -1631,7 +1635,7 @@ body {
   height: 120px;
   font-size: 16px;
   cursor: pointer;
-} */
+}
 
 /*---------------------------------
    Pagination CSS

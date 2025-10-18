@@ -35,14 +35,7 @@
     </div>
     <!--  Preloader End -->
 
-    <!-- Theme Switcher Start -->
-    <div class="switch-theme-mode">
-        <label id="switch" class="switch">
-            <input type="checkbox" onchange="toggleTheme()" id="slider">
-            <span class="slider round"></span>
-        </label>
-    </div>
-    <!-- Theme Switcher End -->
+    
 
     <!-- Custom Cursor -->
     <div class="cursor">
@@ -55,14 +48,115 @@
         <div id="smooth-content">
 
             <div class="position-relative z-1">
-                <div id="header">
+                <!-- Navbar Area Start -->
+                <div class="navbar-area style-three position-relative z-2 bg-albastor" id="navbar">
+                    <div class="container style-two">
+                        <div class="navbar-wrapper d-flex justify-content-between align-items-center">
+                            <a href="index.html" class="navbar-brand">
+                                <img src="assets/img/logo.png" alt="Logo" class="logo-light">
+                                <!-- <img src="assets/img/logo-white.png" alt="Logo" class="logo-dark"> -->
+                            </a>
+                            <div class="menu-area mx-auto">
+                                <div class="overlay"></div>
+                                <nav class="menu">
+                                    <div class="menu-mobile-header">
+                                        <button type="button" class="menu-mobile-arrow bg-transparent border-0"><i
+                                                class="ri-arrow-left-s-line"></i></button>
+                                        <div class="menu-mobile-title"></div>
+                                        <button type="button" class="menu-mobile-close bg-transparent border-0"><i
+                                                class="ri-close-line"></i></button>
+                                    </div>
+                                    <ul class="menu-section p-0 mb-0 lh-1">
+                                        <li><a href="index.html" class="active">Home</a></li>
+                                        <li><a href="about-us.html">About Us</a></li>
+                                        <li class="menu-item-has-children">
+                                            <a href="javascript:void(0)">Services<i
+                                                    class="ri-arrow-down-s-line"></i></a>
+                                            <ul class="menu-subs menu-column-1">
+                                                <li class="menu-item-has-children">
+                                                    <a href="javascript:void(0)">Audit & Assurance<i
+                                                            class="ri-arrow-right-s-line"></i></a>
+                                                    <ul class="menu-subs menu-column-1">
+                                                        <li><a href="service-single.html">Internal Audit</a></li>
+                                                        <li><a href="service-single.html">External Audit</a></li>
+                                                        <li><a href="service-single.">Statutory Audit</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="menu-item-has-children">
+                                                    <a href="javascript:void(0)">VAT & Corporate Tax<i
+                                                            class="ri-arrow-right-s-line"></i></a>
+                                                    <ul class="menu-subs menu-column-1">
+                                                        <li><a href="service-single.html">Corporate Tax</a></li>
+                                                        <li><a href="service-single.html">Corporate Tax Exemption</a>
+                                                        </li>
+                                                        <li><a href="service-single.html">VAT Consulting</a></li>
+                                                        <li><a href="service-single.html">Tax Consulting</a></li>
+                                                        <li><a href="service-single.html">FTA Approved Tax Agent</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="menu-item-has-children">
+                                                    <a href="javascript:void(0)" maxlength="2">Accounting &
+                                                        Bookkeeping<i class="ri-arrow-right-s-line"></i></a>
+                                                    <ul class="menu-subs menu-column-1">
+                                                        <li><a href="service-single.html">Accounting Services</a></li>
+                                                        <li><a href="service-single.html">Bookkeeping Services</a></li>
+                                                        <li><a href="service-single.html">Accounting & Financial
+                                                                Reporting</a></li>
+                                                        <li><a href="service-single.html">Bank Reconciliation</a></li>
+                                                        <li><a href="service-single.html">Backlog Accounts</a></li>
+                                                        <li><a href="service-single.html">Management Reports</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="menu-item-has-children">
+                                                    <a href="javascript:void(0)">Company Formation<i
+                                                            class="ri-arrow-right-s-line"></i></a>
+                                                    <ul class="menu-subs menu-column-1">
+                                                        <li><a href="our-leaders.html">Mainland Company Setup</a></li>
+                                                        <li><a href="service-single.html">Freezone Company Setup (IFZA,
+                                                                SHAMS,
+                                                                RAKEZ, DMCC)</a></li>
+                                                        <li><a href="service-single.html">Offshore Company Setup</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="menu-item-has-children">
+                                                    <a href="javascript:void(0)">Other Services<i
+                                                            class="ri-arrow-right-s-line"></i></a>
+                                                    <ul class="menu-subs menu-column-1">
+                                                        <li><a href="service-single.html">Cashflow & Budgeting</a></li>
 
+                                                    </ul>
+                                                </li>
+
+                                            </ul>
+                                        </li>
+                                        <li><a href="blogs.html">Blogs</a></li>
+                                        <li><a href="careers.html">Careers</a></li>
+                                        <li><a href="contact.html">Contact</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div class="other-options d-flex flex-wrap align-items-center justify-content-end">
+
+                                <div class="option-item d-lg-none">
+                                    <button type="button" class="menu-mobile-trigger">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <!-- Navbar Area End -->
 
                 <!-- Breadcrumb Area Start -->
                 <div class="breadcrumb-area style-one position-relative z-1">
                     <div class="br-bg img-container position-absolute top-0 start-0 w-100">
-                        <img src="assets/img/breadcrumb/br-7.jpg" alt="Image" class="w-100 h-100 object-fit-cover">
+                        <img src="assets/img/career/banner-career1920-525.webp" alt="Image" class="w-100 h-100 object-fit-cover">
                     </div>
                     <div class="container style-one">
                         <div class="row">
@@ -89,122 +183,11 @@
                                     supportive work environment</h2>
                             </div>
                         </div>
-                        <div class="row justify-content-center pb-90">
-                            <div class="col-xl-4 col-md-6">
-                                <div class="job-feature-card style-one bg-white round-20 mb-25">
-                                    <img src="assets/img/icons/growth.svg" alt="Icon">
-                                    <h3 class="fs-24">Career Growth</h3>
-                                    <p class="fs-xxl-18 mb-0">Annual $3,000 education fund with career progression every
-                                        12–18 months.</p>
-                                </div>
-                            </div>
-                            <div class="col-xl-4 col-md-6">
-                                <div class="job-feature-card style-one bg-white round-20 mb-25">
-                                    <img src="assets/img/icons/balance.svg" alt="Icon">
-                                    <h3 class="fs-24">Work-Life Balance</h3>
-                                    <p class="fs-xxl-18 mb-0">Flexible schedules, remote work options, and unlimited PTO
-                                        after 1 year of service.</p>
-                                </div>
-                            </div>
-                            <div class="col-xl-4 col-md-6">
-                                <div class="job-feature-card style-one bg-white round-20 mb-25">
-                                    <img src="assets/img/icons/culture.svg" alt="Icon">
-                                    <h3 class="fs-24">Colaborative Culture</h3>
-                                    <p class="fs-xxl-18 mb-0">Weekly knowledge shares and mentorship programs with
-                                        senior team members.</p>
-                                </div>
-                            </div>
-                            <div class="col-xl-4 col-md-6">
-                                <div class="job-feature-card style-one bg-white round-20 mb-25">
-                                    <img src="assets/img/icons/sun.svg" alt="Icon">
-                                    <h3 class="fs-24">Impactful Work</h3>
-                                    <p class="fs-xxl-18 mb-0">Direct client interaction with business that value your
-                                        expertise & recommendations.</p>
-                                </div>
-                            </div>
-                            <div class="col-xl-4 col-md-6">
-                                <div class="job-feature-card style-one bg-white round-20 mb-25">
-                                    <img src="assets/img/icons/gear-large-2.svg" alt="Icon">
-                                    <h3 class="fs-24">Competitive Compensation</h3>
-                                    <p class="fs-xxl-18 mb-0">Salaries in the top 25% of the market with performance
-                                        bonuses and profit sharing.</p>
-                                </div>
-                            </div>
-                            <div class="col-xl-4 col-md-6">
-                                <div class="job-feature-card style-one bg-white round-20 mb-25">
-                                    <img src="assets/img/icons/heart-large-2.svg" alt="Icon">
-                                    <h3 class="fs-24">Comprehensive Benefits</h3>
-                                    <p class="fs-xxl-18 mb-0">100% covered health insurance, 401(k) matching, and
-                                        commuter benefits.</p>
-                                </div>
-                            </div>
-                        </div>
+                        
                         <h2 class="section-title style-two text-title text-center reveal-text-right mb-40">Current
                             Openings</h2>
                         <div class="job-card-wrap pb-120">
-                            <div class="job-card style-one d-flex flex-wrap align-items-center">
-                                <div class="job-info-wrap d-flex flex-wrap align-items-center">
-                                    <div
-                                        class="employer-logo d-flex flex-column align-items-center justify-content-center rounded-circle">
-                                        <img src="assets/img/career/employer-logo-1.png" alt="Image">
-                                    </div>
-                                    <div class="job-info">
-                                        <h3 class="fs-24 lh-1 mb-10"><a href="career-details.html"
-                                                class="text-title link-hover-primary transition">Senior Accountant</a>
-                                        </h3>
-                                        <span class="fs-xxl-18 d-block mb-1">Chicago, IL (Hybrid)</span>
-                                        <span class="fs-xxl-18 d-block">$85,000 - $105,000</span>
-                                    </div>
-                                </div>
-                                <p class="job-desc fs-xxl-18 pe-xxl-5 mb-0">Lead financial reporting and month-end close
-                                    processes for a portfolio of 25-30 clients. Ideal candidates have 4+ years public
-                                    accounting experience and CPA certification.</p>
-                                <a href="career-details.html"
-                                    class="btn style-one d-inline-flex align-items-center ms-lg-auto">
-                                    <span
-                                        class="btn-icon-one d-flex flex-column align-items-center justify-content-center rounded-circle transition"><img
-                                            src="assets/img/icons/right-arrow.svg" alt="Icon"
-                                            class="d-block mx-auto"></span>
-                                    <span
-                                        class="btn-text fw-bold d-flex flex-column align-items-center justify-content-center transition">Apply
-                                        Now</span>
-                                    <span
-                                        class="btn-icon-two d-flex flex-column align-items-center justify-content-center rounded-circle transition"><img
-                                            src="assets/img/icons/right-arrow.svg" alt="Icon"
-                                            class="d-block mx-auto"></span>
-                                </a>
-                            </div>
-                            <div class="job-card style-one d-flex flex-wrap align-items-center">
-                                <div class="job-info-wrap d-flex flex-wrap align-items-center">
-                                    <div
-                                        class="employer-logo d-flex flex-column align-items-center justify-content-center rounded-circle">
-                                        <img src="assets/img/career/employer-logo-2.png" alt="Image">
-                                    </div>
-                                    <div class="job-info">
-                                        <h3 class="fs-24 lh-1 mb-10"><a href="career-details.html"
-                                                class="text-title link-hover-primary transition">Tax Manager</a></h3>
-                                        <span class="fs-xxl-18 d-block mb-1">Remote (USA)</span>
-                                        <span class="fs-xxl-18 d-block">$110,000 - $140,000</span>
-                                    </div>
-                                </div>
-                                <p class="job-desc fs-xxl-18 pe-xxl-5 mb-0">Oversee tax planning and compliance for
-                                    high-net-worth individuals and SMBs. Requires 6+ years tax experience, CPA/EA
-                                    certification, and expertise in flow-through entities.</p>
-                                <a href="career-details.html"
-                                    class="btn style-one d-inline-flex align-items-center ms-lg-auto">
-                                    <span
-                                        class="btn-icon-one d-flex flex-column align-items-center justify-content-center rounded-circle transition"><img
-                                            src="assets/img/icons/right-arrow.svg" alt="Icon"
-                                            class="d-block mx-auto"></span>
-                                    <span
-                                        class="btn-text fw-bold d-flex flex-column align-items-center justify-content-center transition">Apply
-                                        Now</span>
-                                    <span
-                                        class="btn-icon-two d-flex flex-column align-items-center justify-content-center rounded-circle transition"><img
-                                            src="assets/img/icons/right-arrow.svg" alt="Icon"
-                                            class="d-block mx-auto"></span>
-                                </a>
-                            </div>
+                           
                             <div class="job-card style-one d-flex flex-wrap align-items-center">
                                 <div class="job-info-wrap d-flex flex-wrap align-items-center">
                                     <div
