@@ -193,8 +193,8 @@
   margin-left: 2px;
 }
 .menu > ul > li .menu-column-1 {
-  min-width: 15.6rem;
-  max-width: 15.6rem;
+  min-width: 17rem;
+  max-width: 17rem;
 }
 .menu > ul > li .menu-subs {
   position: absolute;
