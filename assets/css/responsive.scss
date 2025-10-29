@@ -2236,3 +2236,21 @@
         }
     }
 }
+
+/*--------------------------------------------------
+    Custom CSS Styles
+----------------------------------------------------*/
+@media only screen and (max-width: 767px) {
+    
+    .desktopslide{
+        display: none;
+    
+}
+@media only screen and (min-width: 768px) {
+    .mobileslide{
+        display: none;
+    }
+}
+
+}
+

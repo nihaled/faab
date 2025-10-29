@@ -1758,4 +1758,17 @@
     max-width: 1920px;
     padding: 0 150px !important;
   }
+}
+/*--------------------------------------------------
+    Custom CSS Styles
+----------------------------------------------------*/
+@media only screen and (max-width: 767px) {
+  .desktopslide {
+    display: none;
+  }
+}
+@media only screen and (max-width: 767px) and (min-width: 768px) {
+  .mobileslide {
+    display: none;
+  }
 }/*# sourceMappingURL=responsive.css.map */

@@ -1,5 +1,5 @@
 #navbar {
-  height: 120px;
+  height: 100px;
 }
 
 .navbar-top {
@@ -319,7 +319,7 @@
     margin-right: 0;
   }
   .navbar-area .navbar-brand img {
-    max-width: 110px;
+    max-width: 200px;
   }
   .navbar-area .other-options {
     margin-left: 10px;
@@ -354,7 +354,7 @@
     padding: 12px 0;
   }
   .navbar-area.style-one .navbar-brand img, .navbar-area.style-two .navbar-brand img, .navbar-area.style-three .navbar-brand img, .navbar-area.style-four .navbar-brand img {
-    max-width: 110px;
+    max-width: 200px;
   }
   .navbar-area.style-one .menu-mobile-trigger span, .navbar-area.style-two .menu-mobile-trigger span, .navbar-area.style-four .menu-mobile-trigger span {
     background: var(--whiteColor);
@@ -372,7 +372,7 @@
     top: 0 !important;
   }
   .navbar-area .navbar .navbar-brand img {
-    max-width: 105px;
+    max-width: 200px;
   }
   .navbar-area .menu {
     border-radius: 0;
@@ -674,7 +674,7 @@
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .navbar-area .navbar-brand img {
-    max-width: 115px;
+    max-width: 200px;
   }
   .navbar-area .other-options .option-item {
     margin-left: 8px;
@@ -748,7 +748,7 @@
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
   .navbar-area .navbar-brand img {
-    max-width: 140px;
+    max-width: 200px;
   }
 }
 @media only screen and (min-width: 1400px) {
