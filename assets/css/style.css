@@ -38,9 +38,9 @@ This files table contents are outlined below>>>>>
 :root {
   --primaryFont: "DM Sans", sans-serif;
   --secondaryFont: "Rethink Sans", sans-serif;
-  --primaryColor: #0f3539;
-  --secondaryColor: #B9F8B1;
-  --optionalColor: #91D089;
+  --primaryColor: #15203e;
+  --secondaryColor: #70a4d2;
+  --optionalColor: #3a65b0;
   --titleColor: #393737;
   --paraColor: #888787;
   --ashColor: #F5F5F5;
@@ -916,6 +916,7 @@ body {
 .section-title.style-one, .section-title.style-two {
   font-size: 40px;
   line-height: 52px;
+  color: #15203e;
 }
 .section-title.style-three {
   font-size: 48px;
@@ -2061,9 +2062,9 @@ body {
 }
 .about-area.style-three .about-content h6 {
   font-size: 24px;
+  font-weight: 300 !important;
   line-height: 34px;
   margin-bottom: 40px;
-  margin-left: 65px;
 }
 .about-area.style-three .about-content .btn {
   margin-left: 65px;

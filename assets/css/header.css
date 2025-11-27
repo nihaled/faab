@@ -1,5 +1,5 @@
 #navbar {
-  height: 100px;
+  height: 110px;
 }
 
 .navbar-top {
@@ -753,7 +753,7 @@
 }
 @media only screen and (min-width: 1400px) {
   .navbar-area .navbar-brand img {
-    max-width: 300px;
+    max-width: 350px;
   }
   .navbar-area .other-options .option-item {
     margin-left: 11px;
