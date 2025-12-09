@@ -309,8 +309,8 @@
                         <div class="row">
                             <div class="col-xl-3 col-lg-3 col-md-6">
                                 <div class="footer-widget mb-30" data-cue="slideInLeft">
-                                    <a href="index.html" class="logo d-block mb-35">
-                                        <img src="assets/img/logo-white.png" alt="Image">
+                                    <a href="index.html" class="logo d-block mb-35 bg-white round-15 px-3">
+                                        <img src="assets/img/logo.png" alt="Image">
                                     </a>
                                     <p class="text-gray fs-xxl-18 mb-0">FAAB is a trusted accounting and management
                                         consulting firm helping businesses grow with clarity and control.</p>
@@ -411,37 +411,7 @@
     <script src="assets/js/scrollcue.min.js"></script>
     <script src="assets/js/main.js"></script>
 
-    <!-- script for commonheader and footer -->
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            async function loadPart(id, file) {
-                try {
-                    const res = await fetch(file);
-                    if (!res.ok) throw new Error(`Failed to load ${file}`);
-                    const html = await res.text();
-                    const el = document.getElementById(id);
-                    el.innerHTML = html;
-
-                    // Wait a tiny bit to ensure DOM is updated before reinitializing ScrollCue
-                    if (window.scrollCue) {
-                        setTimeout(() => {
-                            scrollCue.init({
-                                duration: 800,
-                                interval: -0.2,
-                                percentage: 0.75,
-                            });
-                        }, 50);
-                    }
-                } catch (err) {
-                    console.error(err);
-                }
-            }
-
-            loadPart("header", "header.html");
-            loadPart("footer", "footer.html");
-        });
-    </script>
-    <!-- script for commonheader and footer -->
+    
 </body>
 
 </html>
